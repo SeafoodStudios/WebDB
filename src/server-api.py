@@ -7,6 +7,10 @@ db = TinyDB('db.json')
 User = Query()
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'This is the REST API for PyNet. Go here for the documentation: https://github.com/SeafoodStudios/PyNet'
+
 @app.route('/get/<path:subpath>', methods=['GET'])
 def get(subpath):
     data = db.search(User.domain == str(subpath))
