@@ -1,10 +1,10 @@
 # PyNet
-## PyNet is Python powered browser & system with a custom domain name system, simple REST API, and a completely open-source frontend AND backend!
+### PyNet is Python powered browser & system with a custom domain name system, simple REST API, and a completely open-source frontend AND backend!
 
-### How To Use Browser
+#### How To Use Browser
 THIS PART IS A WORK IN PROGRESS, PLEASE CHECK BACK LATER!
 
-### How To Use REST API
+#### How To Use REST API
 Command for opening sites:
 ```
 curl https://pynetapi.pythonanywhere.com/get/example
