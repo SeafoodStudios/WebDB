@@ -33,12 +33,12 @@ print(response.json())
 ```
 Command for creating variables:
 ```
+import requests
 create_payload = {
     "variable": "example",
     "password": "securepassword123",
     "value": "ABC123"
 }
-import requests
 create_response = requests.post(
     'https://webdb.pythonanywhere.com/create/',
     headers={'Content-Type': 'application/json'},
