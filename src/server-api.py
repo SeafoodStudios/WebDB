@@ -1,4 +1,4 @@
-from tinydb import TinyDB, Query
+\from tinydb import TinyDB, Query
 from flask import Flask, request
 import bcrypt
 import base64
@@ -49,12 +49,15 @@ def delete():
     variable = data.get('variable')
     password = data.get('password')
     user_data = db.search(User.variable == variable)
-
-    stored_hash = base64.b64decode(user_data[0]['password'])
-    if bcrypt.checkpw(password.encode('utf-8'), stored_hash):
-        db.remove(User.variable == variable)
-        status = "SUCCESS: Variable deleted."
+    if user_data and user_data[0].get('password'):
+        stored_hash = base64.b64decode(user_data[0]['password'])
     else:
-        status = "ERROR: Incorrect password."
+        status = "ERROR: Password empty."
+    if not status == "ERROR: Password empty.":
+        if bcrypt.checkpw(password.encode('utf-8'), stored_hash):
+            db.remove(User.variable == variable)
+            status = "SUCCESS: Variable deleted."
+        else:
+            status = "ERROR: Incorrect password."
 
     return str(status)
