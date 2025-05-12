@@ -28,11 +28,17 @@ def create():
     hashedpassword = bcrypt.hashpw(password, bcrypt.gensalt())
     value = data.get('value')
 
-    if db.search(User.variable == str(variable)):
-        status = "ERROR: Variable taken."
+    if all([variable, password, value]):
+        if len(variable) < 201 and len(password) < 201 and len(value) < 201:
+            if db.search(User.variable == str(variable)):
+                status = "ERROR: Variable taken."
+            else:
+                db.insert({'variable': str(variable), 'password': base64.b64encode(hashedpassword).decode('utf-8'), 'value': str(value)})
+                status = "SUCCESS: Variable created."
+        else:
+            status = "ERROR: Maximum input length is 200."
     else:
-        db.insert({'variable': str(variable), 'password': base64.b64encode(hashedpassword).decode('utf-8'), 'value': str(value)})
-        status = "SUCCESS: Variable created."
+        status = "ERROR: Missing input/s."
 
     return str(status)
 
