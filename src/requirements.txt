@@ -1,0 +1,4 @@
+flask
+tinydb
+bcrypt
+base64
