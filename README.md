@@ -10,7 +10,7 @@ Command for creating sites:
 ```
 curl -X POST https://webdb.pythonanywhere.com/create/ \
 -H "Content-Type: application/json" \
--d '{"variable": "example", "password": "securepassword123", "code": "ABC123"}'
+-d '{"variable": "example", "password": "securepassword123", "value": "ABC123"}'
 ```
 Command for deleting sites:
 ```
