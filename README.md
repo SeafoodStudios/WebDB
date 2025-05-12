@@ -10,7 +10,7 @@ Its features are:
 ## How To Use REST API with Bash
 Command for getting variables:
 ```
-curl https://webdb.pythonanywhere.com/get/example
+curl https://webdb.pythonanywhere.com/get/pi
 ```
 Command for creating variables:
 ```
