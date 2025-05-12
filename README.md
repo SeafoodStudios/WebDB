@@ -7,7 +7,7 @@ Its features are:
 - Self Hostable
 - Key Value
 - Secure With Passwords
-### How To Use REST API
+## How To Use REST API
 Command for getting variables:
 ```
 curl https://webdb.pythonanywhere.com/get/example
