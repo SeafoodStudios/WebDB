@@ -1,8 +1,5 @@
-# PyNet
-### PyNet is Python powered browser & system with a custom domain name system, simple REST API, and a completely open-source frontend AND backend!
-
-#### How To Use Browser
-THIS PART IS A WORK IN PROGRESS, PLEASE CHECK BACK LATER!
+# WebDB
+### WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend!
 
 #### How To Use REST API
 Command for opening sites:
