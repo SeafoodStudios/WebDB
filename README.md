@@ -1,5 +1,5 @@
 # WebDB
-#### WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend!
+WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend!
 
 ### How To Use REST API
 Command for getting variables:
