@@ -1,4 +1,4 @@
-\from tinydb import TinyDB, Query
+from tinydb import TinyDB, Query
 from flask import Flask, request
 import bcrypt
 import base64
