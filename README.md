@@ -28,7 +28,6 @@ curl -X POST https://webdb.pythonanywhere.com/delete/ \
 Command for getting variables:
 ```
 import requests
-
 response = requests.get('https://webdb.pythonanywhere.com/get/example')
 print(response.json())
 ```
@@ -39,6 +38,7 @@ create_payload = {
     "password": "securepassword123",
     "value": "ABC123"
 }
+import requests
 create_response = requests.post(
     'https://webdb.pythonanywhere.com/create/',
     headers={'Content-Type': 'application/json'},
@@ -48,6 +48,7 @@ print(create_response.json())
 ```
 Command for deleting variables:
 ```
+import requests
 delete_payload = {
     "variable": "example",
     "password": "securepassword123"
