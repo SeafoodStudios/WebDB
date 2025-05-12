@@ -10,7 +10,7 @@ Its features are:
 ## How To Use REST API with Bash
 Command for getting variables:
 ```
-curl https://webdb.pythonanywhere.com/get/pi
+curl https://webdb.pythonanywhere.com/get/example
 ```
 Command for creating variables:
 ```
@@ -59,6 +59,51 @@ delete_response = requests.post(
     json=delete_payload
 )
 print(delete_response.json())
+```
+## How To Use REST API with Javascript
+Command for getting variables:
+```
+fetch('https://webdb.pythonanywhere.com/get/example')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+Command for creating variables:
+```
+const createVariableData = {
+  variable: "example",
+  password: "securepassword123",
+  value: "ABC123"
+};
+
+fetch('https://webdb.pythonanywhere.com/create/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(createVariableData)
+})
+  .then(response => response.json())
+  .then(data => console.log('Variable created:', data))
+  .catch(error => console.error('Error:', error));
+```
+Command for deleting variables:
+```
+const deleteVariableData = {
+  variable: "example",
+  password: "securepassword123"
+};
+
+fetch('https://webdb.pythonanywhere.com/delete/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(deleteVariableData)
+})
+  .then(response => response.json())
+  .then(data => console.log('Variable deleted:', data))
+  .catch(error => console.error('Error:', error));
 ```
 ## Thanks!
 Please remember to use this service gently, and to not try to abuse it. Please don't overload or inject the server. But you may reasonably make as many variables as you like! Please remember that if you have the variable name, you can get the variable's value, and it is not password protected. If you liked this service, please follow me on GitHub.
