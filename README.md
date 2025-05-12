@@ -1,11 +1,11 @@
 # WebDB
 WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend!
 Its features are:
-- Free REST API with no API key
-- Open source
-- Cloud
-- Self hostable
-- Key value
+- Free REST API
+- No API Key
+- Open Source
+- Self Hostable
+- Key Value
 ### How To Use REST API
 Command for getting variables:
 ```
