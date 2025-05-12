@@ -9,30 +9,30 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'This is the REST API for PyNet. Go here for the documentation: https://github.com/SeafoodStudios/PyNet'
+    return 'This is the REST API for WebDB. Go here for the documentation: https://github.com/SeafoodStudios/WebDB'
 
 @app.route('/get/<path:subpath>', methods=['GET'])
 def get(subpath):
-    data = db.search(User.domain == str(subpath))
+    data = db.search(User.variable == str(subpath))
     if not data:
-        return "ERROR: Domain does not exist."
+        return "ERROR: Variable does not exist."
     else:
-        return str(data[0]['code'])
+        return str(data[0]['value'])
 
 @app.route('/create/', methods=['POST'])
 def create():
     data = request.get_json()
 
-    domain = data.get('domain')
+    variable = data.get('variable')
     password = data.get('password').encode('utf-8')
     hashedpassword = bcrypt.hashpw(password, bcrypt.gensalt())
-    code = data.get('code')
+    value = data.get('value')
 
-    if db.search(User.domain == str(domain)):
-        status = "ERROR: Domain taken."
+    if db.search(User.variable == str(variable)):
+        status = "ERROR: Variable taken."
     else:
-        db.insert({'domain': str(domain), 'password': base64.b64encode(hashedpassword).decode('utf-8'), 'code': str(code)})
-        status = "SUCCESS: Domain created."
+        db.insert({'variable': str(variable), 'password': base64.b64encode(hashedpassword).decode('utf-8'), 'value': str(value)})
+        status = "SUCCESS: Variable created."
 
     return str(status)
 
@@ -40,14 +40,14 @@ def create():
 def delete():
     data = request.get_json()
 
-    domain = data.get('domain')
+    variable = data.get('variable')
     password = data.get('password')
-    user_data = db.search(User.domain == domain)
+    user_data = db.search(User.variable == variable)
 
     stored_hash = base64.b64decode(user_data[0]['password'])
     if bcrypt.checkpw(password.encode('utf-8'), stored_hash):
-        db.remove(User.domain == domain)
-        status = "SUCCESS: Website deleted."
+        db.remove(User.variable == variable)
+        status = "SUCCESS: Variable deleted."
     else:
         status = "ERROR: Incorrect password."
 
