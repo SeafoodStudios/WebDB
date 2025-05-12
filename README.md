@@ -4,17 +4,17 @@
 #### How To Use REST API
 Command for opening sites:
 ```
-curl https://pynetapi.pythonanywhere.com/get/example
+curl https://webdb.pythonanywhere.com/get/example
 ```
 Command for creating sites:
 ```
-curl -X POST https://pynetapi.pythonanywhere.com/create/ \
+curl -X POST https://webdb.pythonanywhere.com/create/ \
 -H "Content-Type: application/json" \
 -d '{"domain": "newdomain", "password": "securepassword123", "code": "ABC123"}'
 ```
 Command for deleting sites:
 ```
-curl -X POST https://pynetapi.pythonanywhere.com/delete/ \
+curl -X POST https://webdb.pythonanywhere.com/delete/ \
 -H "Content-Type: application/json" \
 -d '{"domain": "newdomain", "password": "securepassword123"}'
 ```
