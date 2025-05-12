@@ -6,6 +6,7 @@ Its features are:
 - Open Source
 - Self Hostable
 - Key Value
+- Secure With Passwords
 ### How To Use REST API
 Command for getting variables:
 ```
