@@ -44,6 +44,7 @@ def create():
 
 @app.route('/delete/', methods=['POST'])
 def delete():
+    status = "ERROR: Request in progress."
     data = request.get_json()
 
     variable = data.get('variable')
