@@ -8,30 +8,30 @@ Its features are:
 - Key Value
 - Secure With Passwords
 ## How To Use REST API with Bash
-Command for getting variables:
+Code for getting variables:
 ```
 curl https://webdb.pythonanywhere.com/get/example
 ```
-Command for creating variables:
+Code for creating variables:
 ```
 curl -X POST https://webdb.pythonanywhere.com/create/ \
 -H "Content-Type: application/json" \
 -d '{"variable": "example", "password": "securepassword123", "value": "ABC123"}'
 ```
-Command for deleting variables:
+Code for deleting variables:
 ```
 curl -X POST https://webdb.pythonanywhere.com/delete/ \
 -H "Content-Type: application/json" \
 -d '{"variable": "example", "password": "securepassword123"}'
 ```
 ## How To Use REST API with Python
-Command for getting variables:
+Code for getting variables:
 ```
 import requests
 response = requests.get('https://webdb.pythonanywhere.com/get/example')
 print(response.json())
 ```
-Command for creating variables:
+Code for creating variables:
 ```
 import requests
 create_payload = {
@@ -46,7 +46,7 @@ create_response = requests.post(
 )
 print(create_response.json())
 ```
-Command for deleting variables:
+Code for deleting variables:
 ```
 import requests
 delete_payload = {
@@ -61,14 +61,14 @@ delete_response = requests.post(
 print(delete_response.json())
 ```
 ## How To Use REST API with Javascript
-Command for getting variables:
+Code for getting variables:
 ```
 fetch('https://webdb.pythonanywhere.com/get/example')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 ```
-Command for creating variables:
+Code for creating variables:
 ```
 const createVariableData = {
   variable: "example",
@@ -87,7 +87,7 @@ fetch('https://webdb.pythonanywhere.com/create/', {
   .then(data => console.log('Variable created:', data))
   .catch(error => console.error('Error:', error));
 ```
-Command for deleting variables:
+Code for deleting variables:
 ```
 const deleteVariableData = {
   variable: "example",
