@@ -1,5 +1,5 @@
 # WebDB
-WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend!
+WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend! It is suitable for small developer projects so that you don't need to build your own server. It also serves as a temporary, working placeholder if you still want to build your own backend.
 Its features are:
 - Free REST API
 - No API Key
