@@ -2,7 +2,7 @@ import requests
 
 class WebDB:
     def get(self, variable):
-        print(requests.get('https://webdb.pythonanywhere.com/get/' + variable).text)
+        return(requests.get('https://webdb.pythonanywhere.com/get/' + variable).text)
     def create(self, variable, password, value):
         create_payload = {
             "variable": str(variable),
