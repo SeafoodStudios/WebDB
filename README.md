@@ -107,4 +107,4 @@ fetch('https://webdb.pythonanywhere.com/delete/', {
   .catch(error => console.error('Error:', error));
 ```
 ## Thanks!
-Please remember to use this service gently, and to not try to abuse it. Please don't overload or inject the server. But you may reasonably make as many variables as you like! Please remember that if you have the variable name, you can get the variable's value, and it is not password protected. If you liked this service, please follow me on GitHub.
+Please remember to use this service gently, and to not try to abuse it. Please don't overload or inject the server. But you may reasonably make as many variables as you like! Please remember that if you have the variable name, you can get the variable's value, and it is not password protected. If you liked this service, please keep using it!
