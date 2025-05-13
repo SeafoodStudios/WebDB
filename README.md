@@ -60,6 +60,7 @@ delete_response = requests.post(
 )
 print(delete_response.json())
 ```
+You can also use the wrapper for this API. It is located in src/pywrapper/
 ## How To Use REST API with Javascript
 Code for getting variables:
 ```
