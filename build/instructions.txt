@@ -1,3 +1,0 @@
-Run the Bash script (main.sh) to run the Flask program.
-After the program runs, you should be able to visit http://127.0.0.1:5000 to get the REST API locally.
-Please use a WSGI server for deployment.
