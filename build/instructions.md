@@ -1,5 +1,9 @@
 ## How to Self Host
 1. Download the Bash script (main.sh), move it into your documents folder and make it executable.
+To make it executable, run these commands after moving it into your documents folder:
+- cd Documents
+- chmod u+x main.sh
+- ./main.sh
 2. Run the Bash script to run the Flask program.
 3. After the program runs, you should be able to visit http://127.0.0.1:5000 to get the REST API locally.
 4. The cloned repository should be in your documents folder.
