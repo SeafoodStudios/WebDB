@@ -107,6 +107,8 @@ fetch('https://webdb.pythonanywhere.com/delete/', {
   .catch(error => console.error('Error:', error));
 ```
 ## How to Self Host
-To self host, follow the instructions in the repository's build folder. Self hosting can be helpful for a more isolated server, or custom code.
+To self host, follow the instructions in the repository's build folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server.
+## Attribution
+Thanks to PythonAnywhere for the free full Python enviroment that hosts my Flask app and thanks to TinyDB, the library I use for simple JSON storage.
 ## Thanks!
 Please remember to use this service gently, and to not try to abuse it. Please don't overload or inject the server. But you may reasonably make as many variables as you like! Please remember that if you have the variable name, you can get the variable's value, and it is not password protected. If you liked this service, please keep using it!
