@@ -1,5 +1,5 @@
 ## How to Self Host
-1. Download the Bash script (main.sh), move it into your documents folder and make it executable.
+1. Download the Bash script from the server folder you want (BlockDB is the wrapper for Scratch modifications), move it into your documents folder and make it executable.
 To make it executable, run these commands after moving it into your documents folder:
 ```
 cd Documents
@@ -15,3 +15,9 @@ chmod u+x main.sh
 cd Documents
 python3 -m flask --app WebDB/src/server/main.py run
 ```
+or for Scratch modifications,
+```
+cd Documents
+python3 -m flask --app WebDB/src/scratchwrapper/main.py run
+```
+Please note that your server is only hosted locally using this method.
