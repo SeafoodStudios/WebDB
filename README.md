@@ -109,7 +109,7 @@ fetch('https://webdb.pythonanywhere.com/delete/', {
 ## How to use the REST API with Scratch Modifications
 Using Scratch modifications to save data permanently on the cloud is hard. This is why I created a wrapper for WebDB called BlockDB so that it can accessible directly with GET commands. Please make sure to not use your real passwords using BlockDB, because it uses GET commands, and they can be logged by browsers.
 
-Download it here:
+*Download it here:*
 
 [Scratch Modification WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/BlockDB.sb3)
 
