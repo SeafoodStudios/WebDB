@@ -3,10 +3,13 @@ from markupsafe import escape
 from flask import Flask, Response, request
 import bcrypt
 import base64
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 db = TinyDB('db.json')
 User = Query()
 app = Flask(__name__)
+limiter = Limiter(get_remote_address, app=app, default_limits=["100 per minute"])
 
 @app.route('/')
 def index():
