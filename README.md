@@ -9,7 +9,7 @@ Its features are:
 - Secure With Passwords
 - Limit Of 1000 Characters Per Variable
 - 100 Requests Per Minute
-If you need more features, please email <contact@seafoodstudios.com>.
+- If you need more features, please email <contact@seafoodstudios.com>.
 ## How To Use REST API with Bash
 Code for getting variables:
 ```
