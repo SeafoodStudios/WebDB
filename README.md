@@ -7,6 +7,7 @@ Its features are:
 - Self Hostable
 - Key Value
 - Secure With Passwords
+- Limit Of 1000 Characters Per Variable
 ## How To Use REST API with Bash
 Code for getting variables:
 ```
