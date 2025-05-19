@@ -1,5 +1,5 @@
 ## How to Self Host
-1. Download the Bash script from the server folder you want (BlockDB is the wrapper for Scratch modifications, and depends on a WebDB server, so if you are self hosting a BlockDB server, please ensure to also run the WebDB server, and edit the code of the BlockDB server to meet the URL of your WebDB server.), move it into your documents folder and make it executable.
+1. Download the Bash script from the server folder you want and rename it "main.py" (BlockDB is the wrapper for Scratch modifications, and depends on a WebDB server, so if you are self hosting a BlockDB server, please ensure to also run the WebDB server, and edit the code of the BlockDB server to meet the URL of your WebDB server), move it into your documents folder and make it executable.
 To make it executable, run these commands after moving it into your documents folder:
 ```
 cd Documents
