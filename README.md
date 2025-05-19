@@ -124,4 +124,4 @@ Thanks to PythonAnywhere for the free full Python enviroment that hosts my Flask
 Please remember to use this service gently, and to not try to abuse it. Please don't overload or inject the server. But you may reasonably make as many variables as you like! Please remember that if you have the variable name, you can get the variable's value, and it is not password protected. To update a variable, delete the variable and create it again.
 ## Thanks!
 Alright, that's it. If you liked this service, please keep using it!
-- SeafoodStudios
+> SeafoodStudios
