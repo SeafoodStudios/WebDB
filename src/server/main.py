@@ -37,7 +37,7 @@ def create():
                 db.insert({'variable': str(variable), 'password': base64.b64encode(hashedpassword).decode('utf-8'), 'value': str(value)})
                 status = "SUCCESS: Variable created."
         else:
-            status = "ERROR: Maximum input length is 200."
+            status = "ERROR: Maximum input length is 1000."
     else:
         status = "ERROR: Missing input/s."
 
