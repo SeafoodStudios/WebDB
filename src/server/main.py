@@ -1,5 +1,6 @@
 from tinydb import TinyDB, Query
-from flask import Flask, request
+from markupsafe import escape
+from flask import Flask, Response, request
 import bcrypt
 import base64
 
@@ -17,7 +18,7 @@ def get(subpath):
     if not data:
         return "ERROR: Variable does not exist."
     else:
-        return str(data[0]['value'])
+        return Response(escape(data[0]['value']), mimetype='text/html')
 
 @app.route('/create/', methods=['POST'])
 def create():
@@ -29,7 +30,7 @@ def create():
     value = data.get('value')
 
     if all([variable, password, value]):
-        if len(variable) < 201 and len(password) < 201 and len(value) < 201:
+        if len(variable) < 1001 and len(password) < 1001 and len(value) < 1001:
             if db.search(User.variable == str(variable)):
                 status = "ERROR: Variable taken."
             else:
