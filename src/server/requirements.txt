@@ -2,3 +2,5 @@ flask
 tinydb
 bcrypt
 base64
+markupsafe
+flask_limiter
