@@ -66,6 +66,7 @@ print(delete_response.text)
 You can also use the wrapper for this API. It is located in the "pywrapper" folder in the "src" folder in the code.
 ## How To Use REST API with Javascript
 *Please note that the Javascript code was generated using ChatGPT, because I have not learned it yet.*
+
 Code for getting variables:
 ```
 fetch('https://webdb.pythonanywhere.com/get/example')
