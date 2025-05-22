@@ -32,7 +32,7 @@ Code for getting variables:
 ```
 import requests
 response = requests.get('https://webdb.pythonanywhere.com/get/example')
-print(response.json())
+print(response.text)
 ```
 Code for creating variables:
 ```
@@ -47,7 +47,7 @@ create_response = requests.post(
     headers={'Content-Type': 'application/json'},
     json=create_payload
 )
-print(create_response.json())
+print(create_response.text)
 ```
 Code for deleting variables:
 ```
@@ -61,10 +61,11 @@ delete_response = requests.post(
     headers={'Content-Type': 'application/json'},
     json=delete_payload
 )
-print(delete_response.json())
+print(delete_response.text)
 ```
 You can also use the wrapper for this API. It is located in the "pywrapper" folder in the "src" folder in the code.
 ## How To Use REST API with Javascript
+*Please note that the Javascript code was generated using ChatGPT, because I have not learned it yet.*
 Code for getting variables:
 ```
 fetch('https://webdb.pythonanywhere.com/get/example')
