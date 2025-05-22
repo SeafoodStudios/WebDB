@@ -1,5 +1,7 @@
-# WebDB 
-<img src="https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/static/logo.png" height="100px">
+<div style="display: flex; align-items: center;">
+  <h1 style="margin-right: 10px;">WebDB</h1>
+  <img src="https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/static/logo.png" height="100px">
+</div>
 
 WebDB is free storage method with a simple REST API and a completely open-source frontend AND backend! It is suitable for small developer projects so that you don't need to build your own server. It also serves as a temporary, working placeholder if you still want to build your own backend.
 
