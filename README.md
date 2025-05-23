@@ -128,7 +128,11 @@ Download it here:
 [mBlock WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/mBlockDB.mblock)
 
 ## How to Self Host
-To self host, follow the instructions in the repository's build folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server.
+To self host, follow the instructions in the repository's [build](https://github.com/SeafoodStudios/WebDB/tree/main/build) folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server.
+
+Here are some mistakes people make with local servers:
+- They use the wrong URL (Use HTTP and the numerical link instead. Include paths too!).
+- They think they are public (the are not, just use a WSGI server instead).
 ## Attribution
 Thanks to PythonAnywhere for the free full Python enviroment that hosts my Flask app and thanks to TinyDB, the library I use for simple JSON storage.
 ## A Few Notes
