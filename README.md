@@ -132,7 +132,7 @@ To self host, follow the instructions in the repository's [build](https://github
 
 Here are some mistakes people make with local servers:
 - They use the wrong URL (Use HTTP and the numerical link instead. Include paths too!).
-- They think they are public (the are not, just use a WSGI server instead).
+- They think they are public (they are not, just use a WSGI server instead).
 ## Attribution
 Thanks to PythonAnywhere for the free full Python enviroment that hosts my Flask app and thanks to TinyDB, the library I use for simple JSON storage.
 ## A Few Notes
