@@ -1,6 +1,6 @@
 from tinydb import TinyDB, Query
 from markupsafe import escape
-from flask import Flask, Response, request
+from flask import Flask, Response, request, render_template
 import bcrypt
 import base64
 from flask_limiter import Limiter
@@ -8,12 +8,12 @@ from flask_limiter.util import get_remote_address
 
 db = TinyDB('db.json')
 User = Query()
-app = Flask(__name__)
+app = Flask(__name__, template_folder='/home/webdb')
 limiter = Limiter(get_remote_address, app=app, default_limits=["100 per minute"])
 
 @app.route('/')
 def index():
-    return 'This is the REST API for WebDB. Go here for the documentation: https://github.com/SeafoodStudios/WebDB'
+    return render_template('index.html')
 
 @app.route('/get/<path:subpath>', methods=['GET'])
 def get(subpath):
