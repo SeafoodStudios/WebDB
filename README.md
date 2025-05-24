@@ -128,7 +128,7 @@ Download it here:
 [mBlock WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/mBlockDB.mblock)
 
 ## How to Self Host
-To self host, follow the instructions in the repository's [build](https://github.com/SeafoodStudios/WebDB/tree/main/build) folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server.
+To self host, follow the instructions in the repository's [build](https://github.com/SeafoodStudios/WebDB/tree/main/build) folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server. Please note that the main page will not exist and will give an error unless you manually download the HTML file from the static folder, but this should not affect performance.
 
 Here are some mistakes people make with local servers:
 - They use the wrong URL (Use HTTP and the numerical link instead. Include paths too!).
