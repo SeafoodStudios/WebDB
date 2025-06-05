@@ -5,6 +5,9 @@
   </tr>
 </table>
 
+> [!IMPORTANT]  
+> Recently, there has been a Python bot that has been sending repetitive traffic towards our "/create/" path using AWS. It has been blocked, and if this continues, we will take further action, which may include contacting AWS and/or adding more request limiting.
+
 WebDB is a free storage method with a simple REST API and a completely open-source frontend AND backend! It is suitable for small developer projects so that you don't need to build your own server. It also serves as a temporary, working placeholder if you still want to build your own backend.
 
 Its features are:
