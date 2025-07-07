@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><h1>WebDB - A Free Cloud Storage Solution</h1></td>
-    <td><img src="https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/static/logo.png" height="100px"></td>
+    <td><img src="https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/static/logo.png" height="50px"></td>
   </tr>
 </table>
 
