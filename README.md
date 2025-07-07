@@ -123,8 +123,7 @@ Download it here:
 [mBlock WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/mBlockDB.mblock)
 
 ## WebDB Demo - eShells Currency
-eShells is a **toy** currency for showing off what WebDB can do. Do NOT use your real passwords or usernames, because although we hash your passwords and encrypt your data, Vercel, our hosting provider, may still log the data. The backend is made in Python and the frontend is made in Turbowarp. You can find the code [here](https://github.com/SeafoodStudios/WebDB/tree/main/src/eshells).
-
+eShells is a **toy** currency for showing off what WebDB can do. Do NOT use your real passwords or usernames, because although we hash your passwords and encrypt your data, Vercel, our hosting provider, may still log the data. The backend is made in Python and the frontend is made in Turbowarp (for the Turbowarp code, sometimes I forget to give the sb3 file, so use the [Unpackager](https://turbowarp.github.io/unpackager/) if necessary). You can find the code [here](https://github.com/SeafoodStudios/WebDB/tree/main/src/eshells).
 Here is the currency: [https://eshells.seafoodstudios.com/](https://eshells.seafoodstudios.com/)
 
 ## How to Self Host
