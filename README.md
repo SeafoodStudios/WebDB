@@ -1,9 +1,4 @@
-<table>
-  <tr>
-    <td><h1>WebDB - A Free Cloud Storage Solution</h1></td>
-    <td><img src="https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/static/logo.png" height="100px"></td>
-  </tr>
-</table>
+# WebDB - A Free Cloud Storage Solution
 
 WebDB is a free storage method with a simple REST API and a completely open-source frontend AND backend! It is suitable for small developer projects so that you don't need to build your own server. It also serves as a temporary, working placeholder if you still want to build your own backend.
 
@@ -126,6 +121,9 @@ Download it here:
 [Scratch Modification WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/BlockDB.sb3)
 
 [mBlock WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/mBlockDB.mblock)
+
+## WebDB Demo - eShells Currency
+eShells is a **toy** currency for showing off what WebDB can do. Do NOT use your real passwords or usernames, because although we hash your passwords and encrypt your data, Vercel, our hosting provider, may still log the data. The backend is made in Python and the frontend is made in Turbowarp. You can find the code here: [https://github.com/SeafoodStudios/WebDB/tree/main/src/eshells](https://github.com/SeafoodStudios/WebDB/tree/main/src/eshells)
 
 ## How to Self Host
 To self host, follow the instructions in the repository's [build](https://github.com/SeafoodStudios/WebDB/tree/main/build) folder. Self hosting can be helpful for a more isolated server with more variables, or custom code. The current code in the build folder will only create a server locally, so if you want it publically, you have to use a WSGI server. Please note that the main page will not exist and will give an error unless you manually download the HTML file from the static folder, but this should not affect performance.
