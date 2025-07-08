@@ -4,9 +4,10 @@ from itertools import cycle
 import base64
 import hashlib
 from tinydb import TinyDB, Query
+import os
 
 app = Flask(__name__)
-password = "2m83vvs2hHVHxrws21Jiap2GTIOPmbdy2ssqw2"
+password = os.environ.get('eshells_password')
 db = TinyDB('db.json')
 User = Query()
 
