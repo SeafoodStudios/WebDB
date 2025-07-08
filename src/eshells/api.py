@@ -3,9 +3,12 @@ import requests
 from itertools import cycle
 import base64
 import hashlib
+from tinydb import TinyDB, Query
 
 app = Flask(__name__)
-password = "YOUR_SECRET_PASSWORD"
+password = "2m83vvs2hHVHxrws21Jiap2GTIOPmbdy2ssqw2"
+db = TinyDB('db.json')
+User = Query()
 
 def xor_encrypt(text: str, password: str) -> str:
     text = "MAGIC|" + text
@@ -133,6 +136,52 @@ def balance(subpath):
                     return 'Error: Incorrect input/s'
             else:
                 return "Error: Non-alphabetical inputs cannot be sent."
+        else:
+            return "Error: Too many inputs/dashes."
+    except Exception as e:
+        return "Error: Fatal Error: " + str(e)
+@app.route('/submit_hash/<path:subpath>', methods=['GET'])
+def submit_hash(subpath):
+    # https://example.com/submit_hash/username-hash-proof
+    try:
+        if subpath.count("-") == 2:
+            inputs = subpath.split("-")
+            if inputs[0].isalpha():
+                if str(inputs[1]) == str(hash_password(inputs[2])):
+                    if not db.search(User.hash == str(inputs[1])):
+                        if str(inputs[1]).startswith("0000000"):
+                            response = requests.get("https://webdb.pythonanywhere.com/get/" + str(inputs[0]))
+                            values = xor_decrypt(response.text, password)
+                            values = values.split("-")
+                            delete_payload = {
+                                "variable": inputs[0],
+                                "password": password
+                            }
+                            delete_response = requests.post(
+                                'https://webdb.pythonanywhere.com/delete/',
+                                headers={'Content-Type': 'application/json'},
+                                json=delete_payload
+                            )
+                            create_payload = {
+                                "variable": inputs[0],
+                                "password": password,
+                                "value": str(xor_encrypt(values[0] + "-" + str(int(values[1])+10), password))
+                            }
+                            create_response = requests.post(
+                                'https://webdb.pythonanywhere.com/create/',
+                                headers={'Content-Type': 'application/json'},
+                                json=create_payload
+                            )
+                            db.insert({'hash': str(inputs[1]), 'proof': str(inputs[2])})
+                            return "Success: Hash mined, currency has been given to address."
+                        else:
+                            return "Error: You must have 7 leading zeros in your hash to gain currency."
+                    else:
+                        return "Error: Hash already mined."
+                else:
+                    return "Error: Incorrect Proof."
+            else:
+                return "Error: Username must be alphabetical"
         else:
             return "Error: Too many inputs/dashes."
     except Exception as e:
