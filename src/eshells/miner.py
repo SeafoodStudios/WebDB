@@ -26,7 +26,8 @@ while True:
         count = 0
         while True:
             if count % 100000 == 0:
-                print(f"""{count} hashes have been attempted.""")
+                if random.randint(1,100) == 1:
+                    print(f"""{count} hashes have been attempted.""")
                 time.sleep(1)
             try:
                 theproof = str(random.randint(1,1000000000000))
