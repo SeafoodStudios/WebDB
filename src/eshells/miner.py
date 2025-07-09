@@ -29,7 +29,7 @@ while True:
                 if random.randint(1,5000) == 1:
                     print(f"""{count} hashes have been attempted.""")
             try:
-                theproof = str(random.randint(1,10000000000))
+                theproof = str(random.randint(1,1000000000000))
                 thehash = str(hash(theproof))
                 if thehash.startswith("0000000"):
                     time.sleep(10)
