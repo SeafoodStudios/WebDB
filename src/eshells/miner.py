@@ -10,6 +10,10 @@ print("eShell Miner")
 print("by SeafoodStudios")
 print("To login, signup and/or access your account, go here:")
 print("https://eshells.seafoodstudios.com/\n")
+print("eShells is a toy currency, and this miner will only gain you eShells, not real world money.")
+print("This program will use a large amount of your computation power. By using this program, you consent to this.")
+print("You may quit at any time by pressing Control + C, or closing the window.")
+print("This file is located in your main directory.")
 
 start = ""
 while True:
