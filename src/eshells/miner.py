@@ -40,6 +40,7 @@ while True:
             except Exception as e:
                 print("Error: " + str(e))
             count += 1
+            time.sleep(0.01)
     elif start == "exit":
         print("Exiting...")
         break
