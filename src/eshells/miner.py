@@ -25,8 +25,8 @@ while True:
         print("Mining has begun. To exit, press Control + C, or close the window.")
         count = 0
         while True:
-            if count % 100000 == 0:
-                if random.randint(1,100) == 1:
+            if count % 1000000 == 0:
+                if random.randint(1,80) == 1:
                     print(f"""{count} hashes have been attempted.""")
                 time.sleep(1)
             try:
