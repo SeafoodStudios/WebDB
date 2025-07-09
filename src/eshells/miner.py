@@ -25,9 +25,8 @@ while True:
         print("Mining has begun. To exit, press Control + C, or close the window.")
         count = 0
         while True:
-            if count % 1000 == 0:
-                if random.randint(1,5000) == 1:
-                    print(f"""{count} hashes have been attempted.""")
+            if count % 10000 == 0:
+                print(f"""{count} hashes have been attempted.""")
             try:
                 theproof = str(random.randint(1,1000000000000))
                 thehash = str(hash(theproof))
@@ -40,7 +39,7 @@ while True:
             except Exception as e:
                 print("Error: " + str(e))
             count += 1
-            time.sleep(0.01)
+            time.sleep(0.001)
     elif start == "exit":
         print("Exiting...")
         break
