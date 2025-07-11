@@ -65,6 +65,8 @@ def transfer(subpath):
                     if str(info[0]) == hash_password(inputs[1]):
                         if int(info[1]) >= int(inputs[2]) and int(inputs[2]) > 0:
                             try:
+                                validation = requests.get("https://webdb.pythonanywhere.com/get/" + str(inputs[3]))
+                                validation = xor_decrypt(validation.text, password)
                                 delete_payload = {
                                     "variable": inputs[0],
                                     "password": password
