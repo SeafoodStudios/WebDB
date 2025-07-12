@@ -123,17 +123,7 @@ Download it here:
 [mBlock WebDB Wrapper](https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/scratchwrapper/mBlockDB.mblock)
 
 ## WebDB Demo - eShells Currency
-eShells is a **toy** currency for showing off what WebDB can do. Do NOT use your real passwords or usernames, because although we hash your passwords and encrypt your data, Vercel, our hosting provider, may still log the data. Also, ALWAYS use HTTPS when transfering eShells. The backend is made in Python and the frontend is made in Turbowarp (for the Turbowarp code, sometimes I forget to give the sb3 file, so use the [Unpackager](https://turbowarp.github.io/unpackager/) if necessary). You can find the code [here](https://github.com/SeafoodStudios/WebDB/tree/main/src/eshells).
-
-To download the miner for this currency, run this (This will only gain you eShells, and it will use your computational power. This will not gain you any real world money):
-```
-curl https://raw.githubusercontent.com/SeafoodStudios/WebDB/refs/heads/main/src/eshells/miner.py -o mine.py
-```
-To start mining, run this:
-```
-python3 mine.py
-```
-If you are feeling suspicious, please inspect the Python file's source code.
+eShells is a **toy** currency for showing off what WebDB can do. Do NOT use your real passwords or usernames, because although we hash your passwords and encrypt your data, Vercel, our hosting provider, may still log the data. Also, ALWAYS use HTTPS when transfering eShells. The backend is made in Python and the frontend is made in Turbowarp. You can find the repository [here](https://github.com/SeafoodStudios/eShells).
 
 Here is the currency's wallet: [https://eshells.seafoodstudios.com/](https://eshells.seafoodstudios.com/)
 
